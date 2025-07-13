@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="head title">
-        <h1>TO DO LIST</h1>
-    </header>
-<form id="frmTasks">
-    <label for="tasks">Görevler</label>
-    <input id="tasks" type="text" placeholder="Lütfen görevi yazınız." required>
-    <button class="add-tasks" type="button">Ekle</button>
-</form>
-    <div id="to-do"> </div>
 
-    <script src="script.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görev Listesi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quattrocento:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="head title">
+    <h1>Görev Listesi</h1>
+  </header>
+
+  <main>
+    <form id="frmTasks">
+      <label for="tasks">Görev Başlığı</label>
+      <input id="tasks" type="text" placeholder="Lütfen görevi yazınız.">
+
+      <label for="description">Açıklama</label>
+      <input id="description" type="text" placeholder="Açıklama (Opsiyonel)">
+
+      <div class="priority">
+        <span>Öncelik:</span><br>
+        <label><input type="radio" name="priority" value="Düşük"> Düşük</label>
+        <label><input type="radio" name="priority" value="Orta"> Orta</label>
+        <label><input type="radio" name="priority" value="Yüksek"> Yüksek</label>
+      </div>
+
+      <button class="add-tasks" type="submit">Ekle</button>
+      <p class="error" id="errorMsg"></p>
+    </form>
+    <div class="button-group">
+      <button id="filterCompleted">Sadece Tamamlananları Göster</button>
+    </div>
+    <div id="to-do"></div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
