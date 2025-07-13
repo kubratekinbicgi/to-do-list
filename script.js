@@ -4,7 +4,7 @@ const descInput = document.getElementById("description");
 const errorMsg = document.getElementById("errorMsg");
 const taskList = document.getElementById("to-do");
 const filterBtn = document.getElementById("filterCompleted");
-const sortBtn = document.getElementById("sortByPriority");
+
 
 
 let showOnlyCompleted = false;
@@ -135,6 +135,3 @@ function renderTasks() {
     }
 }
 
-sortBtn.addEventListener("click", () => {
-    renderTasks();
-});
